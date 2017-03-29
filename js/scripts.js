@@ -1,3 +1,4 @@
+/* globals $ */
 // Put all of your jQuery and JavaScript in this document.
 var book1 = {
     "id": 1,
@@ -51,30 +52,32 @@ var book4 = {
     ]
 };
 
-$( "#book1 h1" ).text( book1.name );
-$( "#book1 h2" ).text( book1.author );
-$( "#book1 img" ).attr( "src", book1.picture_url );
-$( "book1 h3" ).text( book1.price );
-$( "book1 ul" ).text( book1.selling_points );
-$( "book1 span" ).text( book1.id );
+var appendToPage = function appendToPage( product ){
+    var $container = $( "#content" );
 
-$( "#book2 h1" ).text( book2.name );
-$( "#book2 h2" ).text( book2.author );
-$( "#book2 img" ).attr( "src", book2.picture_url );
-$( "book2 h3" ).text( book2.price );
-$( "book2 ul" ).text( book2.selling_points );
-$( "book2 span" ).text( book2.id );
+    $container.append( "<h1>" + product.name + "</h1>",
+    "<h2>" + product.author + "</h2>",
+    "<img src='" + product.picture_url + "'/>",
+    "<h3>" + product.price + "</h3>",
+    "<ul>" + product.selling_points + "</ul>",
+    "<span>" + product.id + "</span>" );
+};
 
-$( "#book3 h1" ).text( book3.name );
-$( "#book3 h2" ).text( book3.author );
-$( "#book3 img" ).attr( "src", book3.picture_url );
-$( "book3 h3" ).text( book3.price );
-$( "book3 ul" ).text( book3.selling_points );
-$( "book3 span" ).text( book3.id );
+appendToPage( book1 );
+appendToPage( book2 );
+appendToPage( book3 );
+appendToPage( book4 );
 
-$( "#book4 h1" ).text( book4.name );
-$( "#book4 h2" ).text( book4.author );
-$( "#book4 img" ).attr( "src", book4.picture_url );
-$( "book4 h3" ).text( book4.price );
-$( "book4 ul" ).text( book4.selling_points );
-$( "book4 span" ).text( book4.id );
+/*
+var generateItem = function generateItem( product ){
+    $( "#book" + product.id + " h1" ).text( product.name );
+    $( "#book" + product.id + " h2" ).text( product.author );
+    $( "#book" + product.id + " img" ).attr( "src", product.picture_url );
+    $( "#book" + product.id + " h3" ).text( product.price );
+    $( "#book" + product.id + " ul" ).text( product.selling_points );
+    $( "#book" + product.id + " span" ).text( product.id );
+};
+
+generateItem( book1 );
+generateItem( book2 );
+*/
