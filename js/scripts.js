@@ -67,17 +67,3 @@ appendToPage( book1 );
 appendToPage( book2 );
 appendToPage( book3 );
 appendToPage( book4 );
-
-/*
-var generateItem = function generateItem( product ){
-    $( "#book" + product.id + " h1" ).text( product.name );
-    $( "#book" + product.id + " h2" ).text( product.author );
-    $( "#book" + product.id + " img" ).attr( "src", product.picture_url );
-    $( "#book" + product.id + " h3" ).text( product.price );
-    $( "#book" + product.id + " ul" ).text( product.selling_points );
-    $( "#book" + product.id + " span" ).text( product.id );
-};
-
-generateItem( book1 );
-generateItem( book2 );
-*/
