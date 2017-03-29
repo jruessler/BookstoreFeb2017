@@ -51,16 +51,18 @@ var book4 = {
     ]
 };
 
-var generateItem = function generateItem( product ){
-    $( "#book" + product.id + " h1" ).text( product.name );
-    $( "#book" + product.id + " h2" ).text( product.author );
-    $( "#book" + product.id + " img" ).attr( "src", product.picture_url );
-    $( "#book" + product.id + " h3" ).text( product.price );
-    $( "#book" + product.id + " ul" ).text( product.selling_points );
-    $( "#book" + product.id + " span" ).text( product.id );
+var appendToPage = function appendToPage( product ){
+    var $container = $( "#content" );
+
+    $container.append( "<h1>" + product.name + "</h1>",
+    "<h2>" + product.author + "</h2>",
+    "<img src='" + product.picture_url + "'/>",
+    "<h3>" + product.price + "</h3>",
+    "<ul>" + product.selling_points + "</ul>",
+    "<span>" + product.id + "</span>" );
 };
 
-generateItem( book1 );
-generateItem( book2 );
-generateItem( book3 );
-generateItem( book4 );
+appendToPage( book1 );
+appendToPage( book2 );
+appendToPage( book3 );
+appendToPage( book4 );
