@@ -14,11 +14,16 @@ body{
 }
 nav{
     background-color: #a3a8a3;
-    margin-top: 2em;
+    margin: 0;
+    height: 50px;
     position: fixed;
     width: 100%;
     top: 0;
     right: 0;
+}
+nav > a{
+    font-size: 32px;
+    padding: 48px 48px 48px 48px;
 }
 h1{
     font-size: 3em;

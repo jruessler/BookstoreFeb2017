@@ -1,5 +1,4 @@
 /* globals $ */
-// Put all of your jQuery and JavaScript in this document.
 var book1 = {
     "id": 1,
     "name": "The Communist Manifesto",
