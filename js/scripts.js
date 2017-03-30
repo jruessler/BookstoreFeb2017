@@ -92,6 +92,12 @@ for( let items in products ){
     products[ items ].forEach( appendToPage );
 }
 
-$( "nav" ).on( "click", "a", () => {
+$( "nav" ).on( "click", "a.music", () => {
     $( "#content" ).empty();
+    console.log( products.albums );
+} );
+
+$( "nav" ).on( "click", "a.books", () => {
+    $( "#content" ).empty();
+    console.log( products.books );
 } );
