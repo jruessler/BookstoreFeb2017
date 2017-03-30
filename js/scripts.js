@@ -3,6 +3,17 @@ var products = {
     "albums": [
         {
             "id": 1,
+            "name": "2112",
+            "author": "Rush feat. NEIL PEART WHO STANDS ALONE",
+            "picture_url": "http://images.popmatters.com/news_art/b/bp-rush-2112-3501.jpg",
+            "price": "Priceless",
+            "selling_points": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            ]
+        },
+        {
             "name": "The Communist Manifesto: Kidz Bop",
             "author": "Carl, Mark's buddy",
             "picture_url": "http://kidzbop.s3.amazonaws.com/kidz-bop/2016/09/Kidz-Bop-331-1024x1024.jpg",
@@ -88,10 +99,7 @@ var appendToPage = function appendToPage( product ){
     );
 };
 
-for( let items in products ){
-    products[ items ].forEach( appendToPage );
-}
-
 $( "nav" ).on( "click", "a", () => {
     $( "#content" ).empty();
+    products.albums.forEach( appendToPage );
 } );
