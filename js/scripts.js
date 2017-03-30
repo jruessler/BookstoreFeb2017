@@ -1,6 +1,20 @@
 /* globals $ */
 var products = {
-    "albums": [],
+    "albums": [
+        {
+            "id": 1,
+            "name": "Some album",
+            "author": "Artist Artist",
+            "picture_url": "http://images.popmatters.com/news_art/b/bp-rush-2112-3501.jpg",
+            "price": "FREE",
+            "selling_points": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            ]
+        },
+    ],
+
     "books": [
         {
             "id": 1,
@@ -78,4 +92,11 @@ var appendToPage = function appendToPage( product ){
 };
 
 
-products.books.forEach( appendToPage );
+for( let items in products ){
+    products[ items ].forEach( appendToPage );
+}
+
+$( "nav" ).on( "click", "a", () => {
+    $( "#content" ).empty();
+    products.albums.forEach( appendToPage );
+} );
