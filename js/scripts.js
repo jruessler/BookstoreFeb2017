@@ -1,6 +1,59 @@
 /* globals $ */
 var products = {
-    "albums": [],
+    "albums": [
+        {
+            "id": 1,
+            "name": "Sparkles",
+            "author": "Lady Jane",
+            "picture_url": "http://midwestlaminating.com/wp-content/uploads/2012/12/Sparkles.jpg",
+            "price": 20,
+            "selling_points": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            ]
+        },
+
+        {
+            "id": 2,
+            "name": "Copper Sparkles",
+            "author": "Lady Jane",
+            "picture_url": "https://s-media-cache-ak0.pinimg.com/originals/f6/4d/5e/f64d5e21bb16926fa3f7c5912928ce6d.jpg",
+            "price": 20,
+            "selling_points": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            ]
+        },
+
+        {
+            "id": 3,
+            "name": "Green Sparkles",
+            "author": "Lady Jane",
+            "picture_url": "https://s-media-cache-ak0.pinimg.com/564x/41/d7/15/41d7156dedcbbe9abb325ce17bb6d7ef.jpg",
+            "price": 20,
+            "selling_points": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            ]
+        },
+
+        {
+            "id": 4,
+            "name": "Sparkles",
+            "author": "Lady Jane",
+            "picture_url": "http://midwestlaminating.com/wp-content/uploads/2012/12/Sparkles.jpg",
+            "price": 20,
+            "selling_points": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            ]
+        },
+    ],
+
     "books": [
         {
             "id": 1,
@@ -77,5 +130,6 @@ var appendToPage = function appendToPage( product ){
     );
 };
 
-
-products.books.forEach( appendToPage );
+for( let items in products ){
+    products[ items ].forEach( appendToPage );
+}
