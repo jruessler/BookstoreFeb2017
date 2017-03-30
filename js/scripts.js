@@ -52,7 +52,7 @@ var products = {
             ]
         },
         {
-            "id": 5
+            "id": 5,
             "name": "The Communist Manifesto: Kidz Bop",
             "author": "Carl, Mark's buddy",
             "picture_url": "http://kidzbop.s3.amazonaws.com/kidz-bop/2016/09/Kidz-Bop-331-1024x1024.jpg",
